@@ -14,7 +14,6 @@ import com.tencent.wxcloudrun.dto.CounterRequest;
 import com.tencent.wxcloudrun.model.Counter;
 import com.tencent.wxcloudrun.service.CounterService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -129,7 +128,7 @@ public class CounterController {
   }
 
   @PostMapping(value = "/automatic-reply", produces = {"application/json"})
-  public JSONObject automaticReply(@RequestBody JSONObject jsonObject, HttpServletRequest request) throws JSONException {
+  public JSONObject automaticReply(@RequestBody JSONObject jsonObject, HttpServletRequest request)  {
     log.info("接受请求参数,json={}", JSON.toJSONString(jsonObject));
 
     // 获取入参
