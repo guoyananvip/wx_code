@@ -39,6 +39,7 @@ public class CounterController {
   @GetMapping(value = "/api/count")
   ApiResponse get() {
     logger.info("/api/count get request");
+    logger.info("小郭测试");
     Optional<Counter> counter = counterService.getCounter(1);
     Integer count = 0;
     if (counter.isPresent()) {
