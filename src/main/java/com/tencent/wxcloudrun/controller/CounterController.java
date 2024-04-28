@@ -127,7 +127,7 @@ public class CounterController {
     return "success";
   }
 
-  @PostMapping(value = "/automatic-reply", produces = {"application/json"})
+  @PostMapping(value = "/automatic", produces = {"application/json"})
   public JSONObject automaticReply(@RequestBody JSONObject jsonObject, HttpServletRequest request)  {
     log.info("接受请求参数,json={}", JSON.toJSONString(jsonObject));
 
